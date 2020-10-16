@@ -23,15 +23,35 @@ into the {body} of the default.hbs template --}}
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
     <div class="inner posts">
+      {{#if @member}}
+      {{else}}
+        <!-- show subscribe form -->
+        {{>subscribe-form}}
 
+        <!-- get static pages -->
         <div class="post-feed">
-            {{#foreach posts}}
-
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
-
-            {{/foreach}}
+            {{#get "pages" limit="all"}}
+                {{#foreach pages}}
+                    {{> "page-card"}}
+                {{/foreach}}
+            {{/get}}
         </div>
+      {{/if}}
+
+      <div class="post-feed">
+        <!-- members will see restricted posts with tag fictions -->
+        {{#get "posts" filter="primary_tag:fictions"}}
+            {{#foreach posts}}
+                {{> "post-card"}}
+            {{/foreach}}
+        {{/get}}
+        <!-- everyone should see unrestricted posts with tag cuisine -->
+        {{#get "posts" filter="primary_tag:cuisine"}}
+            {{#foreach posts}}
+                {{> "post-card"}}
+            {{/foreach}}
+        {{/get}}
+      </div>
 
     </div>
 </main>

@@ -1,13 +1,13 @@
 routes:
+  /: home
   /signup/: members/signup
   /signin/: members/signin
   /account/: members/account
 
 collections:
-  /:
-    permalink: /{slug}/
-    template: index
-
-taxonomies:
-  tag: /tag/{slug}/
-  author: /author/{slug}/
+  /cuisine/:
+    permalink: /cuisine/{slug}/
+    filter: primary_tag:cuisine
+  /fictions/:
+    permalink: /fictions/{slug}/
+    filter: primary_tag:fictions
