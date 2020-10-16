@@ -1,4 +1,6 @@
 {
+  "1 min read": "1 min de lecture",
+  "% min read": "% min de lecture",
   "Account": "Mon compte",
   "Already have an account?":   "Déjà inscrit?",
   "Billing info update failed.":   "Echec de la mise à jour des informations de facturation.",
@@ -6,6 +8,7 @@
   "Check your inbox and click the link to confirm your subscription":   "Vérifiez votre mail et cliquez sur le lien pour confirmer votre inscription",
   "Continue":   "Continuer",
   "Don't have an account yet?":   "Pas encore de compte?",
+  "Get the latest posts delivered right to your inbox": "Comme andre.gide@cuverville.fr, inscrivez-vous pour accéder aux textes",
   "Go to the front page →":   "Aller à la page d'accueil →",
   "Great! Next, complete checkout for full access to":   "Super! Ensuite, Ensuite, terminez le paiement pour un accès complet à",
   "Great!":   "Super!",
@@ -25,6 +28,7 @@
   "Signup":   "Inscription",
   "Subscribe": "S'inscrire",
   "Subscribe now":   "S'inscrire maintenant",
+  "Subscribe to": "S'inscrire à",
   "Success! Your account is fully activated, you now have access to all content.":   "Bravo! Vous êtes abonné et pouvez accéder à tout le contenu du site.",
   "Success! Your billing info is updated.":   "Succès! Informations de facturation mises à jour.",
   "This post is for paying subscribers only":   "Ce texte est réservé aux abonnés payants",
