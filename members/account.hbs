@@ -7,6 +7,7 @@
     <div class="inner">
 
     {{#if @member.paid}}
+        <!-- nicomo: we do not have paid memberships at this stage
 
         {{!-- Logged in, paying member: Show account info --}}
         <div class="subscriber-box">
@@ -75,7 +76,7 @@
                 </div>
             {{/foreach}}
         </div>
-
+    nicomo: we do not have paid membership at this stage -->
     {{else if @member}}
 
         {{!-- Logged in, not paying: Link to checkout --}}
@@ -86,13 +87,21 @@
                     <img src="{{@member.avatar_image}}" />
                 {{/if}}
             </div>
-            <h1 class="account-box-title">Currently, you're not a subscriber</h1>
-            <p>Hey there! <strong>{{@member.email}}</strong> is subscribed to free updates from {{@site.title}}, but doesn't have a paid subscription to unlock full access.</p>
+            
+            <!-- nicomo: no paid memberships offered at this stage, changing texts, no link to checkout
+            <h1 class="account-box-title">Currently, you're not a subscriber</h1> -->
+            <h1 class="account-box-title">{{t "You are a subscriber" }}</h1>
+
+            <!-- <p>Hey there! <strong>{{@member.email}}</strong> is subscribed to free updates from {{@site.title}}, but doesn't have a paid subscription to unlock full access.</p>-->
+            <p>👋 {{@member.email}} {{t "is subscribed. You'll have the opportunity to buy an early edition of the book later on." }}</p>
+
+            <!-- nicomo: no paid memberships offered at this stage, no link to checkout
             <div class="authbox-signup">
                 <a class="button primary" href="{{@site.url}}/signup/">
                     <span class="button-content">Subscribe now</span>
                 </a>
             </div>
+            -->
         </div>
 
     {{else}}
